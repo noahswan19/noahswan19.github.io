@@ -1,6 +1,6 @@
-html, body, header, #intro {
+/* html, body, header, #intro {
   height: 100%;
-}
+} */
 /* #intro {
   background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -8,6 +8,10 @@ html, body, header, #intro {
   -o-background-size: cover;
   background-size: cover;
 } */
-header {
-  background-color: #B8CADA
+.header {
+   padding: 30px;
+   text-align: center;
+   background: #B8CADA;
+   color: white;
+   font-size: 30px;
 }
