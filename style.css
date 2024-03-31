@@ -8,3 +8,6 @@ html, body, header, #intro {
   -o-background-size: cover;
   background-size: cover;
 }
+header {
+  background-color: #6B9094
+}
