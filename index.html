@@ -1,67 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Noah Swan</title>
+<title>Noah Swan - Portfolio</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts: Inter for clean body text, Lora for elegant headings -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* Base Styles & Typography */
 * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-/*   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-/*   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; */
+  font-family: 'Inter', sans-serif; /* Clean, modern sans-serif for body text */
+  line-height: 1.6; /* Enhance readability with increased line height */
+  color: #333; /* Soft black for text, easier on the eyes than pure black */
+  background-color: #f9f9f9; /* Light off-white background for a fresh feel */
 }
-  li{
-    margin: 35px 0;
-  }
 
-/* Style the top navigation bar */
+/* Container for overall content width */
+.site-container {
+  max-width: 1200px; /* Max width to keep content readable on large screens */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Horizontal padding for smaller screens */
+}
+
+/* Top Navigation Bar */
 .topnav {
-  overflow: hidden;
-  background-color: #576B85;
+  background-color: #2c3e50; /* Deep blue-gray, professional and calming */
+  padding: 15px 0; /* Vertical padding */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  display: flex; /* Use flexbox for horizontal navigation */
+  justify-content: center; /* Center nav items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-/* Style the topnav links */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+  color: #ecf0f1; /* Light silver for links */
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: 12px 25px; /* Generous padding for clickable areas */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font weight for emphasis */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+  border-radius: 5px; /* Slightly rounded corners for links */
+  margin: 5px 10px; /* Space between nav items */
 }
 
-/* Change color on hover */
 .topnav a:hover {
-  background-color: #DCE2E8;
-  color: black;
+  background-color: #34495e; /* Darker blue-gray on hover */
+  color: #ffffff; /* White text on hover */
 }
 
-/* Style the content */
-.content {
-  background-color: #DCE2E8;
-  padding: 10px;
-  height: fit-content
+/* Header Section */
+.hero-section {
+  background-color: #ffffff; /* White background for the main hero section */
+  padding: 60px 0; /* More vertical padding */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Very subtle shadow */
+  margin-bottom: 30px; /* Space before the next content block */
+  border-bottom: 1px solid #e0e0e0; /* Subtle separator */
 }
 
-/* Style the footer */
-.footer {
-  background-color: #E8E3DC;
-  padding: 10px;
-}
-
-.container {
+.hero-content {
   display: flex;
+  flex-direction: column; /* Stack elements by default */
   align-items: center;
   justify-content: center;
-  padding-left: 45px;
-  padding-right: 45px;
-  column-gap:20px;
+  gap: 30px; /* Space between text and image */
+  max-width: 1000px; /* Limit content width within the hero */
+  margin: 0 auto;
+  padding: 0 40px; /* Padding for content inside hero */
+}
+
+.hero-text h1 {
+  font-family: 'Lora', serif; /* Elegant serif font for main heading */
+  font-size: 3.8em; /* Larger, more impactful main heading */
+  color: #2c3e50; /* Dark blue-gray for headings */
+  margin-bottom: 15px; /* Space below name */
+  font-weight: 700; /* Bold heading */
+}
+
+.hero-text p {
+  font-size: 1.2em; /* Slightly larger text for the intro paragraph */
+  max-width: 700px; /* Limit width for readability */
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hero-image img {
+  border-radius: 50%; /* Make image perfectly circular */
+  width: 200px; /* Fixed size for the image */
+  height: 200px;
+  object-fit: cover; /* Ensure image covers the area, even if cropped */
+  border: 5px solid #bdc3c7; /* Light gray border for a subtle frame */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* More prominent shadow for the image */
+}
+
+/* Section Styling */
+.section {
+  background-color: #ffffff;
+  padding: 50px 0; /* Consistent vertical padding for sections */
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 8px; /* Slightly rounded corners for sections */
+  overflow: hidden; /* Clear floats if any, good practice */
+}
+
+.section-header {
+  font-family: 'Lora', serif;
+  font-size: 2.8em; /* Size for section titles */
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px; /* Space below section heading */
+  font-weight: 700;
+}
+
+.section-intro-text {
+  font-size: 1.1em;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px; /* Centered with more space below */
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+/* Project Blocks */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between project cards */
+  padding: 0 40px; /* Padding for the grid itself */
+}
+
+.project-card {
+  background-color: #fcfcfc; /* Lighter background for cards */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Card-like shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  display: flex; /* Use flexbox for content within card */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push title to top, links to bottom */
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
+}
+
+.project-card h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.6em; /* Project title size */
+  color: #34495e;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.project-card p {
+  font-size: 1em;
+  margin-bottom: 20px; /* Space before links */
+  flex-grow: 1; /* Allow paragraph to take up available space */
+}
+
+.project-card .links a {
+  color: #3498db; /* Blue for links */
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 15px; /* Space between multiple links */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.project-card .links a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Shiny Apps Section - Similar to Projects, but with list */
+.shiny-apps-section {
+  background-color: #f0f4f8; /* A light, distinct background for this section */
+  padding: 50px 0;
+  margin-bottom: 30px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); /* Inset shadow for a different feel */
+  border-radius: 8px;
+}
+
+.shiny-apps-list {
+  list-style: none; /* Remove default bullets */
+  padding: 0 80px; /* Padding for the list container */
+  max-width: 900px; /* Limit list width */
+  margin: 0 auto;
+}
+
+.shiny-apps-list li {
+  background-color: #ffffff;
+  margin-bottom: 20px; /* Space between list items */
+  padding: 20px 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center; /* Vertically align content */
+  gap: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shiny-apps-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.shiny-apps-list li::before {
+  content: '⚡'; /* Use an emoji for a friendly bullet point */
+  font-size: 1.2em;
+  color: #f39c12; /* A vibrant accent color */
+}
+
+.shiny-apps-list li a {
+  font-size: 1.1em;
+  color: #34495e;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.shiny-apps-list li a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #34495e; /* Darker blue-gray for footer */
+  color: #ecf0f1; /* Light text for footer */
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px; /* Space above footer */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row; /* Side-by-side for text and image on larger screens */
+    text-align: left; /* Align text to left */
+  }
+
+  .hero-text {
+    flex: 1; /* Allow text to take available space */
+  }
+
+  .hero-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+  }
+
+  .hero-text h1 {
+    text-align: left;
+  }
+
+  .hero-text p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .topnav {
+    flex-direction: column; /* Stack nav items vertically on small screens */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .topnav a {
+    margin: 0; /* Remove horizontal margin */
+    border-radius: 0; /* Remove rounded corners */
+  }
+
+  .hero-text h1 {
+    font-size: 2.8em; /* Adjust font size for smaller screens */
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-header {
+    font-size: 2em;
+  }
+
+  .section-intro-text {
+    margin-bottom: 30px;
+  }
+
+  .projects-grid, .shiny-apps-list {
+    padding: 0 20px; /* Reduced padding for smaller screens */
+  }
+
+  .project-card, .shiny-apps-list li {
+    padding: 20px; /* Adjust padding for smaller cards/list items */
+  }
+
+  .project-card h3 {
+    font-size: 1.4em;
+  }
+
+  .shiny-apps-list li a {
+    font-size: 1em;
+  }
 }
 </style>
 </head>
@@ -74,172 +326,125 @@ body {
   <a href="https://medium.com/@noahswan19">Medium</a>
 </div>
 
+<div class="site-container">
 
-<!--   Header  -->
-
-  
-<div class="content">
-  <h1 style = "font-size:55px;" align = "center">Noah Swan</h1>
-  <div class = "container">
-    <p style = "font-size:28px;">Welcome to my portfolio! My name is Noah, and I am pursuing my MS Statistics at the University of Chicago.
-      Here you will find links to write-ups and code for projects I have worked on with a focus on sports analytics.
-      My contact information is on my resume; feel free to reach out to me with questions.</p>
-  <img src=https://lh3.googleusercontent.com/pw/AP1GczNIlPf0VJQsblvILL-FZ-Lz5jJWJwnxc0d2LT15xpU8NP0RpH0ya7cekmx1mrpYUWZX6G6-5BAkySZjF3gv011VFaymml3FSyJkxjV86R5PElLHEJer_x-azQP3XHiii4OLa1NCBZzUA87_TpGz4IsK=w618-h827-s-no-gm?authuser=0 alt="Noah Headshot",
-  width = 360,height = 480>
+  <!-- Header Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczNIlPf0VJQsblvILL-FZ-Lz5jJWJwnxc0d2LT15xpU8NP0RpH0ya7cekmx1mrpYUWZX6G6-5BAkySZjF3gv011VFaymml3FSyJkxjV86R5PElLHEJer_x-azQP3XHiii4OLa1NCBZzUA87_TpGz4IsK=w618-h827-s-no-gm?authuser=0" alt="Noah Swan Headshot">
+      </div>
+      <div class="hero-text">
+        <h1>Noah Swan</h1>
+        <p>Welcome to my portfolio! My name is Noah, and I am pursuing my MS Statistics at the University of Chicago. Here you will find links to write-ups and code for projects I have worked on with a focus on sports analytics. My contact information is on my resume; feel free to reach out to me with questions.</p>
+      </div>
+    </div>
   </div>
-</div>
 
+  <!-- Recent Projects Section -->
+  <div class="section">
+    <h2 class="section-header">Recent Projects</h2>
+    <p class="section-intro-text">Below you will find some recent projects I have worked on through classwork, data competitions, or my own personal interest.</p>
 
-<!-- Recent Projects -->
-  
+    <div class="projects-grid">
+      <!-- Tennis Match Simulations -->
+      <div class="project-card">
+        <div>
+          <h3>Simulating Tennis Matches</h3>
+          <p>Over the past couple of months, I have completed a project that developed and evaluated a method for predicting tennis match results using match simulation. This project brings together some different things I've worked on in the past along with my first attempt at simulation using maximum likelihood estimation. In order to predict matches, the method uses a post-match win probability model to estimate win probability for simulations of tennis matches drawn from match statistic distributions for each individual player. Further details on the implementation and methodology can be found in the article here and the code is posted on my GitHub.</p>
+        </div>
+        <div class="links">
+          <a href="https://medium.com/@noahswan19/simulating-tennis-matches-with-maximum-likelihood-estimation-6e4c0ca1370e">Read Article</a>
+          <a href="https://github.com/noahswan19/Tennis-Projects">GitHub Code</a>
+        </div>
+      </div>
 
-<div class = "content" style = "background-color:#FFFFFF">
-  <h1 align = "center">Recent Projects</h1>
-<p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;">
-  Below you will find some recent projects I have worked on through classwork, data competitions, or my own personal interest.
-</p>
+      <!-- Deep Learning Project -->
+      <div class="project-card">
+        <div>
+          <h3>Predicting Pass Play Results for Professional Football</h3>
+          <p>For a Deep Learning class, I worked with two classmates to build a model to predict EPA and yards gained for NFL plays from the 2018 season. We wanted to see if we could build a model to predict the result of a pass play from conditions up to the throw. This model would allow us to attribute credit to quarterbacks or wide receivers who consistently achieve higher EPA after the throw when compared to the model's predictions. We compared results for a random forest, XGBoost, and a neural network architecture, with the last performing the best. The full report can be found here.</p>
+        </div>
+        <div class="links">
+          <a href="https://drive.google.com/file/d/1QvBjH--5Bd1RtAO4MraI3N9SoyapZoED/preview">Read Report</a>
+        </div>
+      </div>
 
-<!-- Tennis Match Simulations -->
+      <!-- Data Mining Project -->
+      <div class="project-card">
+        <div>
+          <h3>Predicting Balls Hit into Play</h3>
+          <p>As part of a Data Mining class, I worked with two classmates on a semester-long project to find a dataset and build a model. Our group attempted to build a model classifying whether a ball hit into a play resulted in a hit or an out using data from the 2021 MLB season. We compared several types of models in the analysis and also implemented the SMOTE method for dealing with a class imbalance. The full details can be found in our final report here.</p>
+        </div>
+        <div class="links">
+          <a href="https://drive.google.com/file/d/11rK3GrwBhMtU85GUOVqmGc7ICq-a2NWU/preview">Read Report</a>
+        </div>
+      </div>
 
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Simulating Tennis Matches</b> <br>
-    Over the past couple of months, I have completed a project that developed and evaluated a method for predicting tennis match results using match simulation. This project 
-    brings together some different things I've worked on in the past along with my first attempt at simulation using maximum likelihood estimation. In order to predict matches, the method uses
-    a post-match win probability model to estimate win probability for simulations of tennis matches drawn from match statistic distributions for each individual player. Further details on the implementation 
-    and methodology can be found in the article <a href = "https://medium.com/@noahswan19/simulating-tennis-matches-with-maximum-likelihood-estimation-6e4c0ca1370e">
-        here</a> and the code is posted on my GitHub.
-  </p
+      <!-- Senior Thesis -->
+      <div class="project-card">
+        <div>
+          <h3>Senior Economics Thesis</h3>
+          <p>During my senior year, I completed a year-long thesis on uncertainty within macroeconomics (final product here). Inspired by different papers applying the work of Thomas Kuhn to the field of economics, I attempted to contextualize the development of uncertainty within a Kuhnian, paradigmatic framework. I am grateful to have had the opportunity to pursue independent research on a topic of interest.</p>
+        </div>
+        <div class="links">
+          <a href="https://drive.google.com/file/d/1iTR5CwXXeHizPxy0jonOBXAuq-LKp4Pw/preview">Read Thesis</a>
+        </div>
+      </div>
 
-<!-- Deep Learning Project -->
+      <!-- Syracuse Basketball Competition -->
+      <div class="project-card">
+        <div>
+          <h3>Designing a Gameplan for the Golden State Warriors</h3>
+          <p>As part of the executive board of the Sports Analytics Club at Villanova University, I helped lead a team in designing this presentation that ultimately won the 2023 Syracuse Basketball Analytics competition. We were tasked with building a gameplan to defend the Golden State Warriors using play-by-play and possession data. We analyzed team and player tendencies, using points per possession as a measure of efficiency. We also modeled points over expectation using an XGBoost model to identify areas of the court where the Warriors outperformed the average. I was in charge of the model building along with the visualizations, and the team gave the presentation to a panel of judges who deemed ours the best ahead of finalists from Tulane, Penn, and Duke.</p>
+        </div>
+        <div class="links">
+          <a href="https://drive.google.com/file/d/17fEVV0RaFbizc98_aBXm5AhDykG-EgnH/preview">View Presentation</a>
+        </div>
+      </div>
 
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Predicting Pass Play Results for Professional Football</b> <br>
-    For a Deep Learning class, I worked with two classmates to build a model to predict EPA and yards gained for NFL plays from the 2018 season. We wanted
-    to see if we could build a model to predict the result of a pass play from conditions up to the throw. This model would allow 
-    us to attribute credit to quarterbacks or wide receivers who consistently achieve higher EPA after the throw when compared to the model's predictions.
-    We compared results for a random forest, XGBoost, and a neural network architecture, with the last performing the best.
-    The full report can be found <a href = "https://drive.google.com/file/d/1QvBjH--5Bd1RtAO4MraI3N9SoyapZoED/preview">
-        here</a>.
-  </p
+      <!-- ATP Confounding All-Stars -->
+      <div class="project-card">
+        <div>
+          <h3>"The Most Confusing Players in Tennis"</h3>
+          <p>I was inspired to write this article after listening to a podcast episode trying to identify the hardest players to analyze on the ATP tour. My approach to this question was to try and identify the least consistent players on tour as a proxy for being difficult to analyze. My initial strategy was to look at match-to-match variance in player statistics. I also built a couple of models predicting match statistics using lagged player statistics to see which players were consistently the hardest to predict. All results and further discussion can be found in the article here and the code for the article can be found here.</p>
+        </div>
+        <div class="links">
+          <a href="https://medium.com/@noahswan19/atp-confounding-all-stars-ba5ce15f4e5a">Read Article</a>
+          <a href="https://github.com/noahswan19/Tennis-Projects/blob/main/Clean%20Confounding%20All%20Stars%20(2024.03.19%20NS).R">GitHub Code</a>
+        </div>
+      </div>
 
+      <!-- EP Modeling -->
+      <div class="project-card">
+        <div>
+          <h3>Modeling Expected Points in Python</h3>
+          <p>I have mainly worked in R up until recently, so this is my first project doing data work in Python outside of some spot work in a Deep Learning class. As an R programmer, you will notice most of the code here takes advantage of method chaining in pandas at least for the data cleaning. For the project, I built an XGBoost model to predict the points scored on a drive given the circumstances in a play. This methodology underlies the EPA statistic oft-cited in NFL analytics circles. I compare my results to those included in the play-by-play data in the nfl_data_py python package.</p>
+        </div>
+        <div class="links">
+          <a href="https://github.com/noahswan19/Misc-Projects/blob/main/Clean%20EP%20Model%20(2024.03.29%20NS).ipynb">GitHub Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-<!-- Data Mining Project -->
-
-    
-    <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Predicting Balls Hit into Play </b> <br>
-    As part of a Data Mining class, I worked with two classmates on a semester-long project to find a dataset and build a 
-        model. Our group attempted to build a model classifying whether a ball hit into a play resulted in a hit or an out using data
-        from the 2021 MLB season. We compared several types of models in the analysis and also implemented the SMOTE method for dealing
-        with a class imbalance. The full details can be found in our final report <a href = "https://drive.google.com/file/d/11rK3GrwBhMtU85GUOVqmGc7ICq-a2NWU/preview">
-        here</a>.
-  </p>
-
-
-<!-- Senior Thesis -->
-
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Senior Economics Thesis </b> <br>
-    During my senior year, I completed a year-long thesis on
-    uncertainty within macroeconomics (final product <a href = "https://drive.google.com/file/d/1iTR5CwXXeHizPxy0jonOBXAuq-LKp4Pw/preview">here</a>).
-        Inspired by different papers applying the work of Thomas Kuhn to the field of economics, I attempted to
-        contextualize the development of uncertainty within a Kuhnian, paradigmatic framework. I am grateful to have had the opportunity to pursue independent research on a topic of interest.
-  </p>
-
-
-<!--   Syracuse Basketball Competition -->
-
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Designing a Gameplan for the Golden State Warriors</b> <br>
-    As part of the executive board of the Sports Analytics Club at Villanova University, I helped lead a team in designing 
-    <a href = "https://drive.google.com/file/d/17fEVV0RaFbizc98_aBXm5AhDykG-EgnH/preview">this presentation</a>
-     that ultimately won the 2023 Syracuse Basketball Analytics competition. We were tasked with building a gameplan to 
-    defend the Golden State Warriors using play-by-play and possession data. We analyzed team and player tendencies, 
-    using points per possession as a measure of efficiency. We also modeled points over expectation using an XGBoost model to
-    identify areas of the court where the Warriors outperformed the average. I was in charge of the model building along with 
-    the visualizations, and the team gave the presentation to a panel of judges who deemed ours the best ahead of finalists
-    from Tulane, Penn, and Duke.
-  </p>
-
-
-  <!--   ATP Confounding All-Stars -->
-
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">"The Most Confusing Players in Tennis"</b> <br>
-    I was inspired to write this article after listening to a podcast episode trying to identify the hardest players to
-    analyze on the ATP tour. My approach to this question was to try and identify the least consistent players on tour as a proxy
-    for being difficult to analyze. My initial strategy was to look at match-to-match variance
-    in player statistics. I also built a couple of models predicting match statistics using lagged player statistics to see which
-    players were consistently the hardest to predict. All results and further discussion can be found in the article 
-     <a href = "https://medium.com/@noahswan19/atp-confounding-all-stars-ba5ce15f4e5a">here</a> and the code for the article can be
-    found 
-    <a href = "https://github.com/noahswan19/Tennis-Projects/blob/main/Clean%20Confounding%20All%20Stars%20(2024.03.19%20NS).R">here</a>.
-  </p>
-
-
-    <!--   EP Modeling -->
-
-  
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;border-style: solid;border-color:#000000;
-    padding:1em">
-    <b style = "font-size:30px">Modeling Expected Points in Python</b> <br>
-    I have mainly worked in R up until recently, so this is my first project doing data work in Python outside of some 
-    spot work in a Deep Learning class. As an R programmer, you will notice most of the code 
-    (<a href = "https://github.com/noahswan19/Misc-Projects/blob/main/Clean%20EP%20Model%20(2024.03.29%20NS).ipynb">here</a>) 
-    takes advantage of method chaining in pandas at least for the data cleaning.
-    For the project, I built an XGBoost model to predict the points scored on a drive
-    given the circumstances in a play. This methodology underlies the EPA statistic oft-cited in NFL analytics circles. I compare
-    my results to those included in the play-by-play data in the nfl_data_py python package. 
-  </p>
-
-  
-  <!--   Shiny Apps -->
-
-  
-  <div class = "content" style = "background-color:#DCE2E8">
-  <h1 align = "center">Shiny Apps</h1>
-  <p style = "font-size:20px;padding-left: 45px;
-  padding-right: 45px;">
-    During my role as lead data analyst at Oklahoma City Energy, I built out several shiny apps for the coaching staff which I 
-  wanted to share here. Apologies for any delays in accessing the apps; my code has improved since writing these apps. Despite some inefficiencies, I think the following apps have some interesting visuals.
-    <ul style = "font-size:20px;padding-left: 65px;
-  padding-right: 65px;">
-      <li><a href = "https://noahswan19.shinyapps.io/PassMaps/">Pass Maps and xT</a> - This was the main app
-      we used while I was working there with a variety of different graphs and statistics.</li>
-      <li><a href = "https://noahswan19.shinyapps.io/PassNetworksApp/">Pass Networks</a> - This app hosted one computationally intensive graphic
-        to create and was offloaded to a separate app.</li>
-      <li><a href = "https://noahswan19.shinyapps.io/Recruitment/">Recruitment App</a> - This was the main recruitment app that included visualizations
-      related to the relative performances of players across different positions and statistics.</li>
-      <li><a href = "https://nswan.shinyapps.io/KPI_App/">KPIs</a> - This app provided a more concise visual to track how the team performed
-      across different statistics throughout the season.</li>
+  <!-- Shiny Apps Section -->
+  <div class="section shiny-apps-section">
+    <h2 class="section-header">Shiny Apps</h2>
+    <p class="section-intro-text">During my role as lead data analyst at Oklahoma City Energy, I built out several shiny apps for the coaching staff which I wanted to share here. Apologies for any delays in accessing the apps; my code has improved since writing these apps. Despite some inefficiencies, I think the following apps have some interesting visuals.</p>
+    <ul class="shiny-apps-list">
+      <li><a href="https://noahswan19.shinyapps.io/PassMaps/">Pass Maps and xT</a> - This was the main app we used while I was working there with a variety of different graphs and statistics.</li>
+      <li><a href="https://noahswan19.shinyapps.io/PassNetworksApp/">Pass Networks</a> - This app hosted one computationally intensive graphic to create and was offloaded to a separate app.</li>
+      <li><a href="https://noahswan19.shinyapps.io/Recruitment/">Recruitment App</a> - This was the main recruitment app that included visualizations related to the relative performances of players across different positions and statistics.</li>
+      <li><a href="https://nswan.shinyapps.io/KPI_App/">KPIs</a> - This app provided a more concise visual to track how the team performed across different statistics throughout the season.</li>
     </ul>
-  </p>
   </div>
-  
-</div>
 
+</div> <!-- End site-container -->
+
+<div class="footer">
+  <p>&copy; 2025 Noah Swan. All rights reserved.</p>
+</div>
 
 </body>
 </html>
-
-
