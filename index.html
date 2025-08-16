@@ -347,11 +347,23 @@ body {
     <p class="section-intro-text">Below you will find some recent projects I have worked on through classwork, data competitions, or my own personal interest.</p>
 
     <div class="projects-grid">
+      <!-- Marginal Effect of Hyperparameter Tuning --!>
+      <div class="project-card">
+        <div>
+          <h3>Marginal Effect of XGBoost Hyperparameter Tuning</h3>
+          <p> In this article, I explore the trade-offs between wide and narrow hyperparameter search spaces when tuning XGBoost models. Alongside running systematic experiments, I provide an accessible breakdown of Tree-Structured Parzen Estimators (TPE), reviewing both the underlying research and the source code implementation in hyperopt. To support the analysis, I built a modular python codebase, using polars to structure data through a custom data class and designing reusable components for experimentation so that the methodology could be extended to different prediction tasks.</p>
+        </div>
+        <div class="links">
+          <a href="https://medium.com/@noahswan19/marginal-effect-of-hyperparameter-tuning-with-xgboost-8903c365d1c7">Read Article</a>
+          <a href="https://github.com/noahswan19/XGBoost-Hyperparameter-Analysis">GitHub Code</a>
+        </div>
+      </div>
+      
       <!-- Tennis Match Simulations -->
       <div class="project-card">
         <div>
           <h3>Simulating Tennis Matches</h3>
-          <p>Over the past couple of months, I have completed a project that developed and evaluated a method for predicting tennis match results using match simulation. This project brings together some different things I've worked on in the past along with my first attempt at simulation using maximum likelihood estimation. In order to predict matches, the method uses a post-match win probability model to estimate win probability for simulations of tennis matches drawn from match statistic distributions for each individual player. Further details on the implementation and methodology can be found in the article here and the code is posted on my GitHub.</p>
+          <p>In this project, I developed and evaluated a method for predicting tennis match results using match simulation. This project brings together some different things I've worked on in the past along with my first attempt at simulation using maximum likelihood estimation. In order to predict matches, the method uses a post-match win probability model to estimate win probability for simulations of tennis matches drawn from match statistic distributions for each individual player. Further details on the implementation and methodology can be found in the article here and the code is posted on my GitHub.</p>
         </div>
         <div class="links">
           <a href="https://medium.com/@noahswan19/simulating-tennis-matches-with-maximum-likelihood-estimation-6e4c0ca1370e">Read Article</a>
