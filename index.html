@@ -347,11 +347,29 @@ body {
     <p class="section-intro-text">Below you will find some recent projects I have worked on through classwork, data competitions, or my own personal interest.</p>
 
     <div class="projects-grid">
+      <!-- MLE for Truncated Normal Distribution with Gradient Descent -->
+      <div class="project-card">
+        <div>
+          <h3>MLE for Truncated Normal Distribution with Gradient Descent</h3>
+          <p> 
+            This project implements maximum likelihood estimation of a truncated normal distribution using gradient descent, 
+            written in modern C++20. It features an object-oriented design with input validation, JSON-based configuration, 
+            and integration with Boost.Math and nlohmann/json. The build system is managed with CMake for portability.
+            I was inspired to complete this project from my previous project involving tennis match simulations, where I 
+            ran into difficulties when using MLE to parameterize truncated normal distributions. In future work, I would want
+            to implement alternative optimization algorithms and use a profiler to identify major inefficiencies.
+          </p>
+        </div>
+        <div class="links">
+          <a href="https://github.com/noahswan19/MLE-for-Truncated-Normal-Distribution-with-Gradient-Descent">GitHub Code</a>
+        </div>
+      </div>
+      
       <!-- Marginal Effect of Hyperparameter Tuning -->
       <div class="project-card">
         <div>
           <h3>Marginal Effect of XGBoost Hyperparameter Tuning</h3>
-          <p> In this article, I explore the trade-offs between wide and narrow hyperparameter search spaces when tuning XGBoost models. Alongside running systematic experiments, I provide an accessible breakdown of Tree-Structured Parzen Estimators (TPE), reviewing both the underlying research and the source code implementation in hyperopt. To support the analysis, I built a modular python codebase, using polars to structure data through a custom data class and designing reusable components for experimentation so that the methodology could be extended to different prediction tasks.</p>
+          <p> In this article, I explored the trade-offs between wide and narrow hyperparameter search spaces when tuning XGBoost models. Alongside running systematic experiments, I provided an accessible breakdown of Tree-Structured Parzen Estimators (TPE), reviewing both the underlying research and the source code implementation in hyperopt. To support the analysis, I built a modular Python codebase, using polars to structure data through a custom data class and designing reusable components for experimentation so that the methodology could be extended to different prediction tasks.</p>
         </div>
         <div class="links">
           <a href="https://medium.com/@noahswan19/marginal-effect-of-hyperparameter-tuning-with-xgboost-8903c365d1c7">Read Article</a>
