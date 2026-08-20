@@ -179,6 +179,61 @@ body {
   text-decoration: underline;
 }
 
+/* Experience Section */
+.experience-list {
+  list-style: none;
+  padding: 0 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-item {
+  background-color: #fcfcfc;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.experience-role {
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.experience-dates {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.experience-org {
+  font-size: 1em;
+  color: #34495e;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  margin: 0;
+  font-size: 1em;
+}
+
 /* Shiny Apps Section - Similar to Projects, but with list */
 .shiny-apps-section {
   background-color: #f0f4f8; /* A light, distinct background for this section */
@@ -299,11 +354,11 @@ body {
     margin-bottom: 30px;
   }
 
-  .projects-grid, .shiny-apps-list {
+  .projects-grid, .shiny-apps-list, .experience-list {
     padding: 0 20px; /* Reduced padding for smaller screens */
   }
 
-  .project-card, .shiny-apps-list li {
+  .project-card, .shiny-apps-list li, .experience-item {
     padding: 20px; /* Adjust padding for smaller cards/list items */
   }
 
@@ -336,9 +391,54 @@ body {
       </div>
       <div class="hero-text">
         <h1>Noah Swan</h1>
-        <p>Welcome to my portfolio! My name is Noah, and I am pursuing my MS in Statistics at the University of Chicago. Here you will find links to write-ups and code for projects I have worked on with a focus on sports analytics. My contact information is on my resume; feel free to reach out to me with questions.</p>
+        <p>Welcome to my portfolio! I'm Noah, currently pursuing an MS in Statistics at the University of Chicago, where I also work as a research assistant applying NLP and embedding-based methods at the Data Science Institute. My background spans statistical modeling, machine learning, and large-scale data work, most recently as a Data Science Intern at BCG X and previously as an Associate Analyst at NERA Economic Consulting. Below you'll find write-ups and code from projects spanning Bayesian inference, ML methodology, and sports analytics, an area where I am particularly passionate. My contact information is on my resume; feel free to reach out with questions.</p>
       </div>
     </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="section">
+    <h2 class="section-header">Experience</h2>
+    <p class="section-intro-text">A quick look at my professional and research background. More detail, including earlier roles, is available on my resume.</p>
+    <ul class="experience-list">
+
+      <li class="experience-item">
+        <div class="experience-header">
+          <span class="experience-role">Data Science Intern (Forward Deployed AI Scientist)</span>
+          <span class="experience-dates">Summer 2026</span>
+        </div>
+        <div class="experience-org">BCG X — Chicago, IL</div>
+        <p>Built dbt pipelines on Databricks unifying client transaction, competitor, and runtime data into weekly pricing tables across 1,500 stores, and designed a competitor benchmarking framework to calibrate elasticity-driven price recommendations.</p>
+      </li>
+
+      <li class="experience-item">
+        <div class="experience-header">
+          <span class="experience-role">Research Assistant</span>
+          <span class="experience-dates">January 2026 – Present</span>
+        </div>
+        <div class="experience-org">University of Chicago Data Science Institute</div>
+        <p>Engineered an NLP pipeline using ChromaDB and embedding/edit-distance metrics to extract and evaluate fish stock reports from 140,000+ document chunks, replacing a manual workflow with an LLM-assisted inference method scaled across 1,500+ fish stocks.</p>
+      </li>
+
+      <li class="experience-item">
+        <div class="experience-header">
+          <span class="experience-role">Associate Analyst</span>
+          <span class="experience-dates">July 2023 – May 2025</span>
+        </div>
+        <div class="experience-org">NERA Economic Consulting — Washington, DC</div>
+        <p>Supported antitrust merger review for multiple billion-dollar mergers, using arrow and data.table in R to compute market shares on datasets up to 1.5 TB (cutting computation time 5–20x) and building internal tooling to standardize ggplot2 reporting.</p>
+      </li>
+
+      <li class="experience-item">
+        <div class="experience-header">
+          <span class="experience-role">Sports Analytics: Soccer</span>
+          <span class="experience-dates">2021 – 2022</span>
+        </div>
+        <div class="experience-org">Oklahoma City Energy FC &amp; Orlando City SC</div>
+        <p>Built an ETL pipeline and Shiny dashboard suite from Wyscout API data to track team KPIs and support recruitment for a top-5 league finish, and developed a possession build-up metric and game-state-adjusted metrics to evaluate player and team performance.</p>
+      </li>
+
+    </ul>
   </div>
 
   <!-- Recent Projects Section -->
@@ -352,27 +452,27 @@ body {
       <div class="project-card">
         <div>
           <h3>Simulating Tennis Matches</h3>
-          <p>This GitHub repository updates a project I had completed previously, modeling tennis-player stats as rates of Binomial random 
+          <p>This GitHub repository updates a project I had completed previously, modeling tennis-player stats as rates of Binomial random
             variables with Beta priors and posteriors conditioning on surface and opponent rank. These models are used to
-            simulate match statistics which are fed into a post-match win-probability model to predict tennis match results. The method performs
-          marginally better than a naive rank-based approach, but it gains a larger ~10% edge when looking at matches with players with more matches incorporated
-          into their posterior.</p>
+            simulate match statistics which are fed into a post-match win-probability model to predict tennis match results. The method achieves an
+            11% improvement in prediction accuracy over a naive rank-based approach overall, with a larger ~10 percentage-point edge for matchups
+            where more match history is available to inform the posteriors.</p>
         </div>
         <div class="links">
           <a href="https://github.com/noahswan19/Tennis-Match-Simulation-Inference">GitHub Repository</a>
         </div>
       </div>
 
-      
+
       <!-- MLE for Truncated Normal Distribution with Gradient Descent -->
       <div class="project-card">
         <div>
           <h3>MLE for Truncated Normal Distribution with Gradient Descent</h3>
-          <p> 
-            This project implements maximum likelihood estimation of a truncated normal distribution parameters using gradient descent, 
-            written in C++. It features an object-oriented design with input validation, JSON-based configuration, 
+          <p>
+            This project implements maximum likelihood estimation of a truncated normal distribution parameters using gradient descent,
+            written in C++. It features an object-oriented design with input validation, JSON-based configuration,
             and integration with Boost.Math and nlohmann/json. The build system is managed with CMake for portability.
-            I was inspired to complete this project from my previous project involving tennis match simulations, where I 
+            I was inspired to complete this project from my previous project involving tennis match simulations, where I
             ran into difficulties when using MLE to parameterize truncated normal distributions.
           </p>
         </div>
@@ -380,14 +480,14 @@ body {
           <a href="https://github.com/noahswan19/MLE-for-Truncated-Normal-Distribution-with-Gradient-Descent">GitHub Code</a>
         </div>
       </div>
-      
+
       <!-- Marginal Effect of Hyperparameter Tuning -->
       <div class="project-card">
         <div>
           <h3>Marginal Effect of XGBoost Hyperparameter Tuning</h3>
-          <p> In this article, I explored the trade-offs between wide and narrow hyperparameter search spaces when tuning XGBoost models. 
-            Alongside running systematic experiments, I provided an accessible breakdown of Tree-Structured Parzen Estimators (TPE), reviewing both the underlying research 
-            and the source code implementation in hyperopt. To support the analysis, I built a modular Python codebase, using polars to structure data through a custom data 
+          <p> In this article, I explored the trade-offs between wide and narrow hyperparameter search spaces when tuning XGBoost models.
+            Alongside running systematic experiments, I provided an accessible breakdown of Tree-Structured Parzen Estimators (TPE), reviewing both the underlying research
+            and the source code implementation in hyperopt. To support the analysis, I built a modular Python codebase, using polars to structure data through a custom data
             class and designing reusable components for experimentation so that the methodology could be extended to different prediction tasks.</p>
         </div>
         <div class="links">
@@ -396,12 +496,41 @@ body {
         </div>
       </div>
 
+      <!-- EP Modeling -->
+      <div class="project-card">
+        <div>
+          <h3>Modeling Expected Points in Python</h3>
+          <p>I have mainly worked in R up until recently, so this is my first project doing data work in Python outside of some spot work in a Deep Learning class. As an R programmer,
+            you will notice most of the code here takes advantage of method chaining in pandas at least for the data cleaning. For the project, I built an XGBoost model to predict the points
+            scored on a drive given the circumstances in a play. This methodology underlies the EPA statistic oft-cited in NFL analytics circles. I compare my results to those included in the
+            play-by-play data in the nfl_data_py python package.</p>
+        </div>
+        <div class="links">
+          <a href="https://github.com/noahswan19/Misc-Projects/blob/main/Clean%20EP%20Model%20(2024.03.29%20NS).ipynb">GitHub Code</a>
+        </div>
+      </div>
+
+      <!-- ATP Confounding All-Stars -->
+      <div class="project-card">
+        <div>
+          <h3>"The Most Confusing Players in Tennis"</h3>
+          <p>I was inspired to write this article after listening to a podcast episode trying to identify the hardest players to analyze on the ATP tour. My approach to this question was
+            to try and identify the least consistent players on tour as a proxy for being difficult to analyze. My initial strategy was to look at match-to-match variance in player statistics.
+            I also built a couple of models predicting match statistics using lagged player statistics to see which players were consistently the hardest to predict. All results and further discussion can
+            be found in the article here and the code for the article can be found here.</p>
+        </div>
+        <div class="links">
+          <a href="https://medium.com/@noahswan19/atp-confounding-all-stars-ba5ce15f4e5a">Read Article</a>
+          <a href="https://github.com/noahswan19/Tennis-Projects/blob/main/Clean%20Confounding%20All%20Stars%20(2024.03.19%20NS).R">GitHub Code</a>
+        </div>
+      </div>
+
       <!-- Deep Learning Project -->
       <div class="project-card">
         <div>
           <h3>Predicting Pass Play Results for Professional Football</h3>
-          <p>For a Deep Learning class, I worked with two classmates to build a model to predict EPA and yards gained for NFL plays from the 2018 season. We wanted to see if 
-            we could build a model to predict the result of a pass play from conditions up to the throw. This model would allow us to attribute credit to quarterbacks or wide receivers 
+          <p>For a Deep Learning class, I worked with two classmates to build a model to predict EPA and yards gained for NFL plays from the 2018 season. We wanted to see if
+            we could build a model to predict the result of a pass play from conditions up to the throw. This model would allow us to attribute credit to quarterbacks or wide receivers
             who consistently achieve higher EPA after the throw when compared to the model's predictions. We compared results for a random forest, XGBoost, and a neural network architecture, with the
             last performing the best. The full report can be found here.</p>
         </div>
@@ -414,8 +543,8 @@ body {
       <div class="project-card">
         <div>
           <h3>Predicting Balls Hit into Play</h3>
-          <p>As part of a Data Mining class, I worked with two classmates on a semester-long project to find a dataset and build a model. Our group attempted to 
-            build a model classifying whether a ball hit into a play resulted in a hit or an out using data from the 2021 MLB season. We compared several types of models 
+          <p>As part of a Data Mining class, I worked with two classmates on a semester-long project to find a dataset and build a model. Our group attempted to
+            build a model classifying whether a ball hit into a play resulted in a hit or an out using data from the 2021 MLB season. We compared several types of models
             in the analysis and also implemented the SMOTE method for dealing with a class imbalance. The full details can be found in our final report here.</p>
         </div>
         <div class="links">
@@ -423,27 +552,14 @@ body {
         </div>
       </div>
 
-      <!-- Senior Thesis -->
-      <div class="project-card">
-        <div>
-          <h3>Senior Economics Thesis</h3>
-          <p>During my senior year, I completed a year-long thesis on uncertainty within macroeconomics (final product here). 
-            Inspired by different papers applying the work of Thomas Kuhn to the field of economics, I attempted to contextualize the development of uncertainty
-            within a Kuhnian, paradigmatic framework. I am grateful to have had the opportunity to pursue independent research on a topic of interest.</p>
-        </div>
-        <div class="links">
-          <a href="documents/thesis.pdf" target = "_blank">Read Thesis</a>
-        </div>
-      </div>
-
       <!-- Syracuse Basketball Competition -->
       <div class="project-card">
         <div>
           <h3>Designing a Gameplan for the Golden State Warriors</h3>
-          <p>As part of the executive board of the Sports Analytics Club at Villanova University, I helped lead a team in designing this presentation that 
-            ultimately won the 2023 Syracuse Basketball Analytics competition. We were tasked with building a gameplan to defend the Golden State Warriors using play-by-play 
-            and possession data. We analyzed team and player tendencies, using points per possession as a measure of efficiency. We also modeled points over expectation using an 
-            XGBoost model to identify areas of the court where the Warriors outperformed the average. I was in charge of the model building along with the visualizations, and the team 
+          <p>As part of the executive board of the Sports Analytics Club at Villanova University, I helped lead a team in designing this presentation that
+            ultimately won the 2023 Syracuse Basketball Analytics competition. We were tasked with building a gameplan to defend the Golden State Warriors using play-by-play
+            and possession data. We analyzed team and player tendencies, using points per possession as a measure of efficiency. We also modeled points over expectation using an
+            XGBoost model to identify areas of the court where the Warriors outperformed the average. I was in charge of the model building along with the visualizations, and the team
             gave the presentation to a panel of judges who deemed ours the best ahead of finalists from Tulane, Penn, and Duke.</p>
         </div>
         <div class="links">
@@ -451,32 +567,16 @@ body {
         </div>
       </div>
 
-      <!-- ATP Confounding All-Stars -->
+      <!-- Senior Thesis -->
       <div class="project-card">
         <div>
-          <h3>"The Most Confusing Players in Tennis"</h3>
-          <p>I was inspired to write this article after listening to a podcast episode trying to identify the hardest players to analyze on the ATP tour. My approach to this question was 
-            to try and identify the least consistent players on tour as a proxy for being difficult to analyze. My initial strategy was to look at match-to-match variance in player statistics. 
-            I also built a couple of models predicting match statistics using lagged player statistics to see which players were consistently the hardest to predict. All results and further discussion can 
-            be found in the article here and the code for the article can be found here.</p>
+          <h3>Senior Economics Thesis</h3>
+          <p>During my senior year, I completed a year-long thesis on uncertainty within macroeconomics (final product here).
+            Inspired by different papers applying the work of Thomas Kuhn to the field of economics, I attempted to contextualize the development of uncertainty
+            within a Kuhnian, paradigmatic framework. I am grateful to have had the opportunity to pursue independent research on a topic of interest.</p>
         </div>
         <div class="links">
-          <a href="https://medium.com/@noahswan19/atp-confounding-all-stars-ba5ce15f4e5a">Read Article</a>
-          <a href="https://github.com/noahswan19/Tennis-Projects/blob/main/Clean%20Confounding%20All%20Stars%20(2024.03.19%20NS).R">GitHub Code</a>
-        </div>
-      </div>
-
-      <!-- EP Modeling -->
-      <div class="project-card">
-        <div>
-          <h3>Modeling Expected Points in Python</h3>
-          <p>I have mainly worked in R up until recently, so this is my first project doing data work in Python outside of some spot work in a Deep Learning class. As an R programmer, 
-            you will notice most of the code here takes advantage of method chaining in pandas at least for the data cleaning. For the project, I built an XGBoost model to predict the points 
-            scored on a drive given the circumstances in a play. This methodology underlies the EPA statistic oft-cited in NFL analytics circles. I compare my results to those included in the 
-            play-by-play data in the nfl_data_py python package.</p>
-        </div>
-        <div class="links">
-          <a href="https://github.com/noahswan19/Misc-Projects/blob/main/Clean%20EP%20Model%20(2024.03.29%20NS).ipynb">GitHub Code</a>
+          <a href="documents/thesis.pdf" target = "_blank">Read Thesis</a>
         </div>
       </div>
     </div>
