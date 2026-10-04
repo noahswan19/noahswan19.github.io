@@ -451,6 +451,20 @@ body {
       <!-- Tennis Match Simulations -->
       <div class="project-card">
         <div>
+          <h3>Variational Inference for LDA and Poisson Matrix Factorization</h3>
+          <p>For a Monte Carlo Simulations course, I derived Coordinate Ascent Variational Inference (CAVI) updates for Latent Dirichlet Allocation (LDA) and Poisson Matrix Factorization, two Bayesian hierarchical models. 
+            I implemented CAVI for LDA in PyTorch and fit 20 topics on 5,000 posts from the 20 Newsgroups dataset. Without labels, the model recovered interpretable topics: ~70% of hockey posts and a 46% plurality of 
+            space posts had their matching topic as the largest mixture component. The writeup also shows how auxiliary variables make the Poisson model's updates tractable and how the two models connect.</p>
+        </div>
+        <div class="links">
+          <a href="https://medium.com/@noahswan19/marginal-effect-of-hyperparameter-tuning-with-xgboost-8903c365d1c7">Read Project</a>
+          <a href="https://github.com/noahswan19/Misc-Projects/blob/main/Monte%20Carlo%20Simulations%20Final.ipynb">Jupyter Notebook</a>
+        </div>
+      </div>
+
+      <!-- Tennis Match Simulations -->
+      <div class="project-card">
+        <div>
           <h3>Simulating Tennis Matches</h3>
           <p>This GitHub repository updates a project I had completed previously, modeling tennis-player stats as rates of Binomial random
             variables with Beta priors and posteriors conditioning on surface and opponent rank. These models are used to
